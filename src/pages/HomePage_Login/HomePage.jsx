@@ -1,6 +1,7 @@
 import { PageContainer, Form } from "./styled";
 import logo from "../../assets/LogoLogin.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function HomePage() {
   const [email, setEmail] = useState("");
@@ -9,8 +10,9 @@ export default function HomePage() {
 
   return (
     <PageContainer>
-      HomePage
+      
       <img src={logo} atl="" />
+      
       <Form onSubmit={login}>
         <input
           placeholder="email"
@@ -18,7 +20,7 @@ export default function HomePage() {
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-         <input
+        <input
           placeholder="senha"
           value={senha}
           onChange={(e) => setSenha(e.target.value)}
@@ -26,6 +28,9 @@ export default function HomePage() {
         />
         <button type="submit">Entrar</button>
       </Form>
+      
+        <p>Não tem uma conta? Cadastre-se!</p>
+      
     </PageContainer>
   );
 }

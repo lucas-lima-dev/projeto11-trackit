@@ -4,15 +4,23 @@ import Cadastro from "./pages/Cadastro/Cadastro"
 import Habitos from "./pages/Habitos/Habitos"
 import DiaSemana from "./pages/DiaSemana/DiaSemana"
 import Historico from "./pages/Historico/Historico"
+import styled from "styled-components";
 
 export default function App() {
   return (
-    <>
-      <HomePage />
+    <StyledApp>
+      {/* <HomePage /> */}
       {/* <Cadastro/> */}
-      {/* <Habitos/> */}
+      <Habitos/>
       {/* <DiaSemana/> */}
       {/* <Historico/> */}
-    </>
+    </StyledApp>
   );
 }
+
+const StyledApp = styled.div`
+display:flex;
+flex-direction:column;
+align-items:center;
+
+`
