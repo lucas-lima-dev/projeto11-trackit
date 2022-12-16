@@ -11,8 +11,8 @@ export default function App() {
     <StyledApp>
       {/* <HomePage /> */}
       {/* <Cadastro/> */}
-      <Habitos/>
-      {/* <DiaSemana/> */}
+      {/* <Habitos/> */}
+      <DiaSemana/>
       {/* <Historico/> */}
     </StyledApp>
   );

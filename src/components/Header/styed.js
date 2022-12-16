@@ -4,10 +4,12 @@ import { baseColor2 } from "../../constants/colors";
 export const StyledHeader = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 375px;
   height: 70px;
   background: ${baseColor2};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top:0;
 
   /*  topo | direita | inferior | esquerda*/
   h1 {
