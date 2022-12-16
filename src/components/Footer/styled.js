@@ -19,12 +19,14 @@ export const StyledFooter = styled.div`
     font-weight: 400;
     font-size: 17.976px;
     line-height: 22px;
-
+    cursor: pointer;
     color: ${baseColor1};
+    
   }
   
 
   img{
     margin-bottom: 50px;
+    cursor: pointer;
   }
 `;

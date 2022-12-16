@@ -1,6 +1,7 @@
 import { PageContainer, Form } from "./styled";
 import logo from "../../assets/LogoCadastro.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Cadastro() {
     const [email, setEmail] = useState("");
@@ -42,8 +43,9 @@ export default function Cadastro() {
           />
           <button type="submit">Entrar</button>
         </Form>
-        
+        <Link to={"/"}>
           <p>Já tem uma conta? Faça login!</p>
+        </Link>
         
       </PageContainer>
     );

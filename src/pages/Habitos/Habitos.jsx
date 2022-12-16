@@ -20,6 +20,7 @@ export default function Habitos() {
       </SubHeader>
       {/* <AddHabito nomeHabito={nomeHabito} setNomeHabito={setNomeHabito}/> */}
       <ListaHabitos/>
+      
       <Footer />
     </PageContainer>
   );

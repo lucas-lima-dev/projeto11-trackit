@@ -2,6 +2,7 @@ import { StyledHabitoCard, CheckSquare } from "./styled";
 
 export default function HabitoCard() {
   return (
+    <>
     <StyledHabitoCard>
       <h4>Ler 1 capítulo de livro </h4>
       <p>
@@ -10,5 +11,7 @@ export default function HabitoCard() {
       </p>
       <CheckSquare />
     </StyledHabitoCard>
+    
+    </>
   );
 }

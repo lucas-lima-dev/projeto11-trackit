@@ -10,9 +10,8 @@ export default function HomePage() {
 
   return (
     <PageContainer>
-      
       <img src={logo} atl="" />
-      
+
       <Form onSubmit={login}>
         <input
           placeholder="email"
@@ -28,9 +27,9 @@ export default function HomePage() {
         />
         <button type="submit">Entrar</button>
       </Form>
-      
+      <Link to={"/cadastro"}>
         <p>Não tem uma conta? Cadastre-se!</p>
-      
+      </Link>
     </PageContainer>
   );
 }
