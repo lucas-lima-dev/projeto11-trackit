@@ -24,8 +24,6 @@ export default function Cadastro() {
       password,
     };
 
-    console.log(body)
-
     axios
       .post(URL, body)
       .then((res) => {
@@ -35,10 +33,9 @@ export default function Cadastro() {
         setPassword("");
         setName("");
         setImage("");
-        
       })
 
-      .catch((err) => alert(err.response.data));
+      .catch((err) => alert(err.response.data.message));
   }
 
   return (
@@ -47,6 +44,8 @@ export default function Cadastro() {
 
       <Form onSubmit={createAccount}>
         <input
+          type="email"
+          name="email"
           placeholder="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -54,6 +53,8 @@ export default function Cadastro() {
           dataIdentifier="input-email"
         />
         <input
+          type="password"
+          name="senha"
           placeholder="senha"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
@@ -61,6 +62,8 @@ export default function Cadastro() {
           dataIdentifier="input-password"
         />
         <input
+          type="text"
+          name="nome"
           placeholder="nome"
           value={name}
           onChange={(e) => setName(e.target.value)}
@@ -68,6 +71,8 @@ export default function Cadastro() {
           dataIdentifier="input-name"
         />
         <input
+          type="url"
+          name="foto"
           placeholder="foto"
           value={image}
           onChange={(e) => setImage(e.target.value)}
