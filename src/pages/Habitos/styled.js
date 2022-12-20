@@ -127,9 +127,9 @@ export const WeekDay = styled.div`
   line-height: 25px;
   
   /* color: #DBDBDB; */
-  background-color: #ffffff;
-  border: 1px solid #d5d5d5;
-  color: ${formColor};
+  background: ${props => props.selected ? "#CFCFCF" : "#ffffff"};
+  border: 1px solid ${props => props.selected ? "CFCFCF" : "#d5d5d5"};
+  color: ${props => props.selected ? "#ffffff" : "DBDBDB"};
 `;
 
 export const ContainerButtons = styled.div`

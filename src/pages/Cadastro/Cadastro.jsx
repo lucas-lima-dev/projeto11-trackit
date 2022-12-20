@@ -1,9 +1,10 @@
 import { PageContainer, Form } from "./styled";
 import logo from "../../assets/LogoCadastro.png";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { BASE_URL } from "../../constants/urls";
 import axios from "axios";
+import UserContext from "../../contexts/UserContext";
 
 export default function Cadastro() {
   const [email, setEmail] = useState("");
@@ -11,6 +12,7 @@ export default function Cadastro() {
   const [name, setName] = useState("");
   const [image, setImage] = useState("");
   const navigate = useNavigate();
+  const {setUserImg} = useContext(UserContext)
 
   function createAccount(event) {
     event.preventDefault();
@@ -23,7 +25,7 @@ export default function Cadastro() {
       image,
       password,
     };
-
+    setUserImg(image)
     axios
       .post(URL, body)
       .then((res) => {
