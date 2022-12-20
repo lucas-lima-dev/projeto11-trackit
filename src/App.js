@@ -6,20 +6,23 @@ import DiaSemana from "./pages/DiaSemana/DiaSemana";
 import Historico from "./pages/Historico/Historico";
 import styled from "styled-components";
 import { useState } from "react";
+import AuthContext from "./contexts/AuthenticationContext";
 
 export default function App() {
-  const [token,setToken] = useState("")
+  const [token, setToken] = useState("");
   return (
     <StyledApp>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomePage setToken={setToken}/>} />
-          <Route path="/cadastro" element={<Cadastro />} />
-          <Route path="/habitos" element={<Habitos token={token}/>} />
-          <Route path="/hoje" element={<DiaSemana />} />
-          <Route path="/historico" element={<Historico />} />
-        </Routes>
-      </BrowserRouter>
+      <AuthContext.Provider value={{token,setToken}}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/cadastro" element={<Cadastro />} />
+            <Route path="/habitos" element={<Habitos />} />
+            <Route path="/hoje" element={<DiaSemana />} />
+            <Route path="/historico" element={<Historico />} />
+          </Routes>
+        </BrowserRouter>
+      </AuthContext.Provider>
     </StyledApp>
   );
 }

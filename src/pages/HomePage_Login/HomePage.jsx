@@ -1,14 +1,16 @@
 import { PageContainer, Form } from "./styled";
 import logo from "../../assets/LogoLogin.png";
-import { useState } from "react";
+import { useState,useContext } from "react";
 import { Link,useNavigate } from "react-router-dom";
 import { BASE_URL } from "../../constants/urls";
 import axios from "axios";
+import AuthContext from "../../contexts/AuthenticationContext";
 
-export default function HomePage({setToken}) {
+export default function HomePage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const {setToken} = useContext(AuthContext)
 
   function login(e) {
     e.preventDefault()
@@ -40,6 +42,7 @@ export default function HomePage({setToken}) {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
+          data-test="email-input"
         />
         <input
           type="password"
@@ -47,11 +50,12 @@ export default function HomePage({setToken}) {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
+          data-test="password-input"
         />
-        <button type="submit">Entrar</button>
+        <button type="submit" data-test="login-btn">Entrar</button>
       </Form>
-      <Link to={"/cadastro"}>
-        <p>Não tem uma conta? Cadastre-se!</p>
+      <Link to={"/cadastro"} data-test="signup-link">
+        <p >Não tem uma conta? Cadastre-se!</p>
       </Link>
     </PageContainer>
   );

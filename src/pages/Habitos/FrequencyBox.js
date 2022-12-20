@@ -1,7 +1,7 @@
 import { WeekDay } from "./styled"
-export default function FrequencyBox({weekday}) {
+export default function FrequencyBox({weekday,selected, onClick}) {
     return (
-        <WeekDay>
+      <WeekDay selected={selected} onClick={onClick} >
         {weekday}
       </WeekDay>
     )

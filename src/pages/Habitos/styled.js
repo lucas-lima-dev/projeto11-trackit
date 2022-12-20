@@ -114,20 +114,21 @@ export const WeekDay = styled.div`
   justify-content: center;
   align-items: center;
   margin-right: 4px;
-  background-color: #ffffff;
   box-sizing: border-box;
   width: 30px;
   height: 30px;
-  border: 1px solid #d5d5d5;
   border-radius: 5px;
-
+  cursor: pointer;
+  
   font-family: "Lexend Deca";
   font-style: normal;
   font-weight: 400;
   font-size: 19.976px;
   line-height: 25px;
-
+  
   /* color: #DBDBDB; */
+  background-color: #ffffff;
+  border: 1px solid #d5d5d5;
   color: ${formColor};
 `;
 
@@ -147,6 +148,7 @@ export const ContainerButtons = styled.div`
     font-size: 15.976px;
     line-height: 20px;
     color: ${baseColor1};
+    cursor:pointer;
   }
 
   button {
@@ -162,6 +164,7 @@ export const ContainerButtons = styled.div`
     font-size: 15.976px;
     line-height: 20px;
     color: #fff;
+    cursor:pointer;
   }
 `;
 

@@ -10,9 +10,9 @@ export default function DiaSemana() {
     <PageContainer>
       <Header />
       <SubHeader>
-        <h2>Segunda, 17/05</h2>
-        {/* <p>Nenhum hábito concluído ainda</p> */}
-        <p>67% dos hábitos concluídos</p>
+        <h2 data-test="today">Segunda, 17/05</h2>
+        {/* <p data-test="today-counter">Nenhum hábito concluído ainda</p> */}
+        <p data-test="today-counter">67% dos hábitos concluídos</p>
       </SubHeader>
       <AcompanharListaHabitos />
       

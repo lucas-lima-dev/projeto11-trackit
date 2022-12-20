@@ -3,7 +3,7 @@ import { StyledHeader, StyledLogo, StyledUserImg } from "./styed";
 
 export default function Header() {
   return (
-    <StyledHeader>
+    <StyledHeader data-test="header">
       <Link to={"/"}>
       <h1>TrackIt</h1>
       </Link>
